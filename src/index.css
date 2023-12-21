@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.badge::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(-145deg, #2f9d61 50%, transparent 50%);
+  width: 8px;
+  height: 5px;
+}
+.animation-circle:after {
+  animation: moveRight 3s linear infinite;
+}
+.active {
+  color: #fff;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  background: #2f9d61;
+}
+/* ScrollToTop.css */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2f9d61;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 15px;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top.visible {
+  display: block;
+}
+
+@keyframes moveRight {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 60px;
+  }
+  100% {
+    left: 0;
+  }
+}
