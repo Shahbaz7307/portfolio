@@ -9,7 +9,6 @@ import Contact from "./components/Contact";
 import ScrollToTop from "./components/ScrollTop";
 
 export default function App() {
-  const a = 21;
   return (
     <div className="flex">
       <div>
